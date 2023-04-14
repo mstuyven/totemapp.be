@@ -1,0 +1,104 @@
+:root {
+    --primary: #005C9D;
+    --onPrimary: #ffffff;
+    --background: #FAFAFA;
+    --onBackground: #191919;
+    --surface: #FFFFFF;
+    --onSurfaceVariant: #696F7B;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --primary: #4FA6E4;
+        --onPrimary: #000000;
+        --background: #303030;
+        --onBackground: #ffffff;
+        --surface: #424242;
+        --onSurfaceVariant: #a8b1b9;
+    }
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: var(--background);
+    color: var(var(--onBackground));
+    font-family: sans-serif;
+}
+
+header {
+    display: flex;
+    color: var(--primary);
+    align-items: center;
+    padding: 1rem 1rem 0;
+    max-width: 560px;
+    margin: 0 auto;
+}
+
+header img {
+    margin-right: 0.5rem;
+}
+
+main {
+    padding: 1rem;
+    max-width: 560px;
+    margin: 0 auto;
+}
+
+.profile-card {
+    background-color: var(--surface);
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border-radius: 0.25rem;
+    box-shadow: 0 1px 2px 0 #0000003a;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-row {
+    display: flex;
+    align-items: center;
+    color: var(--onSurfaceVariant);
+    fill: var(--onSurfaceVariant);
+    font-size: 1.25rem;
+}
+
+.profile-row svg {
+    fill: inherit;
+    margin-right: 0.5rem;
+}
+
+.profile-row:first-child {
+    color:  var(--onBackground);
+    font-size: 1.5rem;
+}
+
+.profile-row:first-child svg {
+    width: 2rem;
+    height: 2rem;
+}
+
+.profile-row:not(:last-child) {
+    margin-bottom: 0.5rem;
+}
+
+.action {
+    padding: 0.5rem;
+    border-radius: 9999px;
+    background-color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    text-decoration: none;
+    color: var(--onPrimary);
+}
+
+.action svg {
+    fill: var(--onPrimary);
+    margin-right: 0.25rem;
+}
