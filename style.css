@@ -49,9 +49,8 @@ main {
     margin: 0 auto;
 }
 
-.profile-card {
+.card {
     background-color: var(--surface);
-    padding: 0.75rem;
     margin-bottom: 1rem;
     border-radius: 0.25rem;
     box-shadow: 0 1px 2px 0 #0000003a;
@@ -59,30 +58,46 @@ main {
     flex-direction: column;
 }
 
-.profile-row {
+.card-row {
     display: flex;
     align-items: center;
     color: var(--onSurfaceVariant);
     fill: var(--onSurfaceVariant);
     font-size: 1.25rem;
+    margin: 0 0.75rem;
+    margin-bottom: 0.5rem;
 }
 
-.profile-row svg {
+.card-row:first-child {
+    color: var(--onBackground);
+    font-size: 1.5rem;
+    margin-top: 0.75rem;
+}
+
+.card-row:last-child {
+    margin-bottom: 0.75rem;
+}
+
+.card-row svg {
     fill: inherit;
     margin-right: 0.5rem;
+    flex-shrink: 0;
 }
 
-.profile-row:first-child {
-    color:  var(--onBackground);
-    font-size: 1.5rem;
-}
-
-.profile-row:first-child svg {
+.card-row:first-child svg {
     width: 2rem;
     height: 2rem;
 }
 
-.profile-row:not(:last-child) {
+.card-row.description {
+    color: var(--onBackground);
+}
+
+.card-divider {
+    border-style: solid;
+    border-color: var(--onSurfaceVariant);
+    border-top: none;
+    opacity: 0.5;
     margin-bottom: 0.5rem;
 }
 
